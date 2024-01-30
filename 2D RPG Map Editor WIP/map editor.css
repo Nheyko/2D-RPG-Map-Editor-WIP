@@ -1,0 +1,32 @@
+body {
+    margin: 10px;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+#size-settings {
+    margin-bottom: 10px;
+}
+
+#alignment {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#map {
+    /* outline:1px solid black; */
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#tileset {
+    /* outline:1px solid black; */
+    margin-right: 10px;
+    margin-bottom: 10px;
+}

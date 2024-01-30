@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D RPG Map Editor !</title>
+    <link rel="stylesheet" href="map editor.css">
+    <script src="map editor.js" async></script>
+</head>
+
+<body>
+    <div id="alignment">
+        <canvas id="map" width="800" height="800"></canvas>
+        <canvas id="tileset" width="0", height="0"></canvas>
+    </div>
+
+    <div>
+        <p>Tile selected : </p>
+        <canvas id="tile-selected" width="0", height="0"></canvas>
+    </div>
+
+    <div id="size-settings">
+
+        <p>Map size settings :</p>
+
+        <label for="width">Width</label>
+        <input id="width-input" name="width" type="text" value="800">
+        <button onclick="upWidth()">+</button>
+        <button onclick="downWidth()">-</button>
+        
+        <label for="height">Height</label>
+        <input id="height-input" name="height" type="text" value="800">
+        <button onclick="upHeight()">+</button>
+        <button onclick="downHeight()">-</button>
+    
+        <label for="tile-size">Tile size</label>
+        <select name="tile-size" id="tile-size-select">
+            <option value="8">8</option>
+            <option value="16" selected>16</option>
+            <option value="32">32</option>
+        </select>
+    </div>
+    
+    <button id="uploadTileSetButton">Upload TileSet</button>
+    <input type="file" id="input" accept=".png, .jpg" style="display: none;" onchange="drawTileSet(event)">
+
+    <button>Save Map</button>
+    <button>Load Map</button>
+
+</body>
+
+</html>
